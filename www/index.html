@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <title>Double spend attack</title>
+  <meta charset="UTF-8">
+  <meta property="og:title"              content="Double spend attack">
+  <link href="index.css" rel="stylesheet" type="text/css">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="popper.min.js"></script>
+</head>
+
+<body>
+  <h1 style="margin-top: 30px;text-align: center;"> Double spend attack simulation interface </h1><br>
+  <canvas id="lineChart" style="margin:auto; height:300px; width:700px; margin-top:30px;margin-left:10px;"></canvas><br><br>
+  <div style="margin-left:750px; font-size: 14px; margin-top: -290px;">
+    <div class="row">
+     <div>
+       <label class="font-weight-bold">Nombre de cycles</label>
+       <input id="n" class="form-control input-group-lg reg_name" type="text" placeholder="Cycles">
+     </div>       
+     <div>
+       <label for="A" class="font-weight-bold">Délai maximum avec la chaine officielle</label>
+       <input id="A" class="form-control input-group-lg reg_name" type="text" placeholder="Délai">
+     </div>  
+   </div>
+
+   <div class="row">    
+    <div>  
+   <label for="v" class="font-weight-bold">Montant de double dépense</label>
+   <input id="v" class="form-control input-group-lg reg_name" type="text" placeholder="Montant">
+ </div>  
+   <div>
+     <label for="z" class="font-weight-bold">Nombre de confirmations demandées</label>
+     <input id="z" class="form-control input-group-lg reg_name" type="text" placeholder="Confirmations">
+   </div>
+ </div>
+
+<br>
+<button type="button" class="btn btn-primary" style="margin-left:150px;" onclick="updateChart($('#n')[0].value, $('#A')[0].value, $('#z')[0].value, $('#v')[0].value)">Confirmer</button>
+</body>
+
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+<script type="text/javascript" src="index.js"> </script>
+</html>
+
